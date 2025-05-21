@@ -332,24 +332,102 @@
 //     );
 // }
 
-import React, { useState } from "react";
-import { faker } from "@faker-js/faker";
+// import React, { useState } from "react";
+// import { faker } from "@faker-js/faker";
 
-export default function App() {
-    let [image, setImage] = useState(faker.image.urlPicsumPhotos());
-    let [text, setText] = useState("Text");
-    let [count, setTime]= useState(100)
-    let handleClick = () => {
-        setImage(faker.image.urlPicsumPhotos());
-        setText(faker.person.firstName());
-        setTime();
-    };
+// export default function App() {
+//     let [image, setImage] = useState(faker.image.urlPicsumPhotos());
+//     let [text, setText] = useState("Text");
+//     let [count, setTime]= useState(100)
+//     let handleClick = () => {
+//         setImage(faker.image.urlPicsumPhotos());
+//         setText(faker.person.firstName());
+//         setTime();
+//     };
     
-    return (
-        <>
-            <img src={image} alt="img-1" />
-            <h1>{text}</h1>
-            <button onClick={handleClick}>Change</button>
-        </>
-    );
+//     return (
+//         <>
+//             <img src={image} alt="img-1" />
+//             <h1>{text}</h1>
+//             <button onClick={handleClick}>Change</button>
+//         </>
+//     );
+// }
+
+// import React, { useState } from "react";
+// import ReactDOM from "react-dom/client";
+
+// function FavoriteColor() {
+//   const [color, setColor] = useState("red");
+
+//   return (
+//     <>
+//       <h1>My favorite color is {color}!</h1>
+//       <button
+//         type="button"
+//         onClick={() => setColor("blue")}
+//       >Blue</button>
+//       <button
+//         type="button"
+//         onClick={() => setColor("red")}
+//       >Red</button>
+//       <button
+//         type="button"
+//         onClick={() => setColor("pink")}
+//       >Pink</button>
+//       <button
+//         type="button"
+//         onClick={() => setColor("green")}
+//       >Green</button>
+//     </>
+//   );
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<FavoriteColor />);
+
+// import { useState } from "react";
+// import ReactDOM from "react-dom/client";
+// import Todos from "./todo";
+
+// const App = () => {
+//   const [count, setCount] = useState(0);
+//   const [todos, setTodos] = useState([]);
+
+//   const increment = () => {
+//     setCount((c) => c + 1);
+//   };
+//   const addTodo = () => {
+//     setTodos((t) => [...t, "New Todo"]);
+//   };
+
+//   return (
+//     <>
+//       <Todos todos={todos} addTodo={addTodo} />
+//       <hr />
+//       <div>
+//         Count: {count}
+//         <button onClick={increment}>+</button>
+//       </div>
+//     </>
+//   );
+// };
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(<App />);
+
+import React, { Component } from "react";
+import Child from "./Child";
+
+class App extends Component{
+    render(){
+        return(
+            <div>
+                <h1>Hello you are learning Props...</h1>
+                <Child name="Honey" id={101} skills={["JS", "React", "Java", "SQL"]}/>
+                <Child name="Moon" id={102} skills={["JS", "React", "Express", "Node"]}/>
+            </div>
+        )
+    }
 }
+export default App;
