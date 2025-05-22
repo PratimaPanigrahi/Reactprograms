@@ -486,16 +486,72 @@
 // }
 
 // export default Child;
-import React from "react";
-import Child from "./test";
+// import React from "react";
+// import Child from "./test";
 
-function App() {
-  return (
-    <Child>
-      <h1>Hello from Parent!</h1>
-      <p>This is a child element passed from App to Child.</p>
-    </Child>
-  );
-}
+// function App() {
+//   return (
+//     <Child>
+//       <h1>Hello from Parent!</h1>
+//       <p>This is a child element passed from App to Child.</p>
+//     </Child>
+//   );
+// }
 
-export default App;
+// export default App;
+// function Child(props){
+//     return(
+//         <div>
+//             <h1>name: {props.name}</h1>
+//             <h2>id: {props.id}</h2>
+//             <h2>
+//                 <ul>
+//                     {(props.skills || []).map((v, i) => (
+//                         <li key={i+1}>{v}</li>
+//                     ))}
+//                 </ul>
+//             </h2>               
+//         </div>
+//     )
+// }
+
+// // Set default props
+// Child.defaultProps = {
+//     name: "",
+//     id: [],
+//         skills: []
+// };
+
+// export default Child;
+
+// import React from "react";
+
+// function Operator({ num1 = 5, num2 = 9, op = "*" }) {
+//   let result;
+//   switch (op) {
+//     case "+":
+//       result = num1 + num2;
+//       break;
+//     case "-":
+//       result = num1 - num2;
+//       break;
+//     case "*":
+//       result = num1 * num2;
+//       break;
+//     case "/":
+//       result = num2 !== 0 ? num1 / num2 : "Infinity";
+//       break;
+//     default:
+//       result = "Invalid operator";
+//   }
+
+//   return (
+//     <div>
+//       <h2>
+//         {num1} {op} {num2} = {result}
+//       </h2>
+//     </div>
+//   );
+// }
+
+// export default Operator;
