@@ -416,18 +416,86 @@
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(<App />);
 
-import React, { Component } from "react";
-import Child from "./Child";
+// import React, { Component } from "react";
+// import Child from "./Child";
 
-class App extends Component{
-    render(){
-        return(
-            <div>
-                <h1>Hello you are learning Props...</h1>
-                <Child name="Honey" id={101} skills={["JS", "React", "Java", "SQL"]}/>
-                <Child name="Moon" id={102} skills={["JS", "React", "Express", "Node"]}/>
-            </div>
-        )
-    }
+// class App extends Component{
+//     render(){
+//         return(
+//             <div>
+//                 <h1>Hello you are learning Props...</h1>
+//                 <Child name="Honey" id={101} skills={["JS", "React", "Java", "SQL"]}/>
+//                 <Child name="Moon" id={102} skills={["JS", "React", "Express", "Node"]}/>
+//             </div>
+//         )
+//     }
+// }
+// export default App;
+
+// //  Type 1
+// import React from "react";
+// function Parent(props){
+//     console.log(props);
+//         return(
+//             <div>
+//                 <h1>name: {props.name}</h1>
+//                 <h2>id: {props.id}</h2>
+//                 <h3>percentage: {props.percentage}</h3>
+//                 <h3>skills:</h3>
+                
+//                 <h2>
+//                     <ul>
+//                         {(props.skills || []).map((v,i)=>{
+//                             <li key={i+1}>{v}</li>
+//                         })}
+//                     </ul>
+//                 </h2>               
+//             </div>
+//         )
+// }
+// export default Parent;
+
+// Type 2
+// import React from "react";
+// function Child(props){
+//     console.log(props);
+//     return(
+//         <div>
+//             <h1>name: {props.name}</h1>
+//             <h2>id: {props.id}</h2>
+//             <h2>
+//                 <ul>
+//                     {(props.skills || []).map((v,i) => (
+//                         <li key={i+1}>{v}</li>
+//                     ))}
+//                 </ul>
+//             </h2>               
+//         </div>
+//     )
+// }
+
+// function App() {
+//     return (
+//         <div>
+//             <Child name="John" id={1} skills={["React", "JS", "CSS"]} />
+//             <Child name="Jane" id={2} skills={["Node", "Express"]} />
+//             {/* This will not error, but show empty list */}
+//             <Child name="NoSkills" id={3} />
+//         </div>
+//     );
+// }
+
+// export default Child;
+import React from "react";
+import Child from "./test";
+
+function App() {
+  return (
+    <Child>
+      <h1>Hello from Parent!</h1>
+      <p>This is a child element passed from App to Child.</p>
+    </Child>
+  );
 }
+
 export default App;
