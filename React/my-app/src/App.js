@@ -486,6 +486,8 @@
 // }
 
 // export default Child;
+
+
 // import React from "react";
 // import Child from "./test";
 
@@ -524,6 +526,7 @@
 
 // export default Child;
 
+//Switch Operator
 // import React from "react";
 
 // function Operator({ num1 = 5, num2 = 9, op = "*" }) {
@@ -555,3 +558,239 @@
 // }
 
 // export default Operator;
+
+
+// operators
+// import React from "react";
+
+// const NavbarForChild4 = ({logIn}) => {
+//     let IsAuth = () => {
+//         return (
+//             <>
+//                 <li>sachin</li>
+//                 <li>LogOut</li>
+//             </>
+//         )
+//     }
+//     let IsGuest = () => {
+//         return(
+//             <>
+//                 <li>LogIn</li>
+//                 <li>SignUp</li>
+//             </>
+//         )
+//     };
+//     return(
+//         <div>
+//             <ul>
+//                 <li>Home</li>
+//                 <li>Constact Us</li>
+//                 <li>Blogs</li>
+//                 {logIn?<IsAuth/>:<IsGuest/>}
+//             </ul>
+//         </div>
+//     );
+// };
+
+// export default NavbarForChild4;
+
+//If else
+// import React from "react";  
+
+// const NavbarForChild4 = ({logIn}) => {
+//     if(logIn)
+//         return(
+//             <div>
+//                 <ul>
+//                     <li>Home</li>
+//                     <li>Constact Us</li>
+//                     <li>Blogs</li>
+//                     <li>Sachin</li>
+//                     <li>LogOut</li>
+//                 </ul>
+//             </div>
+//         )
+//     else 
+//         return(
+//             <div>
+//                 <ul>
+//                     <li>About us</li>
+//                     <li>Web page</li>
+//                     <li>Programs</li>
+//                     <li>Guest</li>
+//                     <li>Laguages</li>
+//                 </ul>
+//             </div>
+//         )
+// }
+// export default NavbarForChild4;
+
+// import React from "react";
+
+//Mounting code
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = { message: "Hello, World!" };
+//         console.log("PRatima");
+//     }
+
+//     static getDerivedStateFromProps(props, state) {
+//         console.log("Infobyte");
+//         return null; // No state update
+//     }
+
+//     componentDidMount() {
+//         console.log("Python");
+//         // You can perform API calls or subscriptions here
+//     }
+
+//     render() {
+//         console.log("REact");
+//         return (
+//             <div>
+//                 <h1>{this.state.message}</h1>
+//                 <p>Check the console for mounting phase logs.</p>
+//             </div>
+//         );
+//     }
+// }
+
+// export default App;
+
+//API code
+// import React, { useState, useEffect } from "react";
+
+// export default function App() {
+//     const [data, setData] = useState(null);
+
+//     useEffect(() => {
+//         // This code runs once after the component mounts
+//         fetch("https://jsonplaceholder.typicode.com/todos/1")
+//             .then((response) => response.json())
+//             .then((json) => setData(json));
+//     }, []); // Empty dependency array = run once on mount
+
+//     return (
+//         <div>
+//             <h1>API</h1>
+//             {data ? (
+//                 <pre>{JSON.stringify(data,0, 2)}</pre>
+//             ) : (
+//                 <p>Loading...</p>
+//             )}
+//         </div>
+//     );
+// }
+
+//Constructor code
+// import React from "react";
+
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props); // Always call super(props) first!
+//         this.state = {
+//             message: "Hello from constructor!"
+//         };
+//         console.log("Constructor called");
+//     }
+
+//     render() {
+//         return (
+//             <div>
+//                 <h1>{this.state.message}</h1>
+//                 <p>Check the console to see when the constructor runs.</p>
+//             </div>
+//         );
+//     }
+// }
+
+// export default App;
+
+
+//Get functions code
+// import React from "react";
+
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             message: "Hello from constructor!",
+//             data:" This is infobyte",
+//             name: "Python",
+//             id: 101,
+//             skills: ["JS", "React", "Java", "SQL"],
+//             percentage: 69
+//         };
+//         this.state1={
+//             name: "Ahmad",
+//             id: 1,
+//             skills: ["JS", "React"],
+//             percentage: 69
+//         }
+//         console.log("Constructor called");
+//     }
+
+//     static getDerivedStateFromProps(props, state) {
+//         console.log("getDerivedStateFromProps called");
+//         // Return null if no state update is needed
+//         return null;
+//     }
+
+//     render() {
+//         return (
+//             <div id="container">
+//                 <h1>{this.state.message}</h1>
+//                 <h1>{this.state.data}</h1>
+//                 <h1>{this.state.name}</h1>
+//                 <h1>{this.state.id}</h1>
+//                 <h1>{this.state.skills}</h1>
+//                 <h1>{this.state.percentage}</h1>
+
+//                 <h1>{this.state1.name}</h1>
+//                 <h1>{this.state1.id}</h1>
+//                 <h1>{this.state1.skills}</h1>
+//                 <h1>{this.state1.percentage}</h1>
+//                 <p>Check the console to see when the constructor and getDerivedStateFromProps run.</p>
+//             </div>
+//         );
+//     }
+// }
+
+// export default App;
+
+
+//Mouting data code
+// import React from "react";
+
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             message: "Hello from constructor!"
+//         };
+//         console.log("Constructor called");
+//     }
+
+//     componentDidMount() {
+//         // Here we can make the https requests.
+//         // Here DOM manipulation can be performed.
+//         console.log("componentDidMount called");
+//         // Example: Simulate fetching data
+//         setTimeout(() => {
+//             this.setState({ message: "Data loaded after mount!" });
+//         }, 1000);
+//     }
+
+//     render() {
+//         return (
+//             <div id="container">
+//                 <h1>{this.state.message}</h1>
+//                 <p>Check the console to see when the constructor and componentDidMount run.</p>
+//             </div>
+//         );
+//     }
+// }
+
+// export default App;
+
