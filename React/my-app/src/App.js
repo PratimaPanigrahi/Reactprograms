@@ -794,3 +794,32 @@
 
 // export default App;
 
+// USe for Componenets update code
+// import React from "react";
+
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             message: 987
+//         };
+//         console.log(456);
+//     }
+
+//     shouldComponentUpdate(nextProps, nextState) {
+//         console.log(12345);
+//         // Return true to allow update, false to prevent
+//         return false;
+//     }
+
+//     render() {
+//         return (
+//             <div id="container">
+//                 <h1>{this.state.message}</h1>
+//                 <p>Check the console to see when the constructor and shouldComponentUpdate run.</p>
+//             </div>
+//         );
+//     }
+// }
+
+// export default App;
