@@ -913,26 +913,56 @@
 // }
 
 
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// filepath: /workspaces/Reactprograms/React/my-app/src/App.js
-import DashboardMainContent from './Components/DashboardMainContent/dashboard/dashboard_main';
-import CalendarView from './Components/DashboardMainContent/calendar_view/calendar';
-import './App.css';
+// import React from 'react';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// // filepath: /workspaces/Reactprograms/React/my-app/src/App.js
+// import DashboardMainContent from './Components/DashboardMainContent/dashboard/dashboard_main';
+// import CalendarView from './Components/DashboardMainContent/calendar_view/calendar';
+// import './App.css';
 
-const App = () => {
-  return (
-    <Router>
-      <div className="app-layout">
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<dashbaord />} />
-            <Route path="/calendar" element={<CalendarView />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
-  );
-};
+// const App = () => {
+//   return (
+//     <Router>
+//       <div className="app-layout">
+//         <main className="main-content">
+//           <Routes>
+//             <Route path="/" element={<dashbaord />} />
+//             <Route path="/calendar" element={<CalendarView />} />
+//           </Routes>
+//         </main>
+//       </div>
+//     </Router>
+//   );
+// };
 
-export default App;
+// export default App;
+
+//Forcerendering code
+// import React from "react";
+
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             message: "Hello from constructor!"
+//         };
+//         console.log("Fullstack Developer");
+//     }
+
+//     handleForceUpdate = () => {
+//         // This will force the component to re-render
+//         this.forceUpdate();
+//     };
+
+//     render() {
+//         return (
+//             <div id="container">
+//                 <h1>{this.state.message}</h1>
+//                 <p>Check the console to see when the constructor runs.</p>
+//                 <button onClick={this.handleForceUpdate}>Force Update</button>
+//             </div>
+//         );
+//     }
+// }
+
+// export default App;
