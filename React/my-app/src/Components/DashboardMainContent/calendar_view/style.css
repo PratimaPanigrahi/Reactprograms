@@ -1,0 +1,27 @@
+.calendar-view {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.calendar-day {
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  background-color: #f1f5f9;
+  font-weight: 500;
+}
+
+.has-appointment {
+  background-color: #3b82f6;
+  color: white;
+}

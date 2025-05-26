@@ -823,3 +823,116 @@
 // }
 
 // export default App;
+
+// snapshotupdate code
+// import React from "react";
+
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             message: "Hello from constructor!"
+//         };
+//         console.log(789456123);
+//     }
+
+//     // This method is called right before the DOM is updated
+//     getSnapshotBeforeUpdate(prevProps, prevState) {
+//         console.log("Python");
+//         // You can return any value here; it will be passed to componentDidUpdate
+//         return null;
+//     }
+
+//     componentDidUpdate(prevProps, prevState, snapshot) {
+//         console.log(1234);
+//     }
+
+//     render() {
+//         return (
+//             <div id="container">
+//                 <h1>{this.state.message}</h1>
+//                 <p>Check the console to see when the constructor runs.</p>
+//             </div>
+//         );
+//     }
+// }
+
+// export default App;
+
+//compenentWillUnmount code
+// import React from "react";
+
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             message: "Hello from constructor!"
+//         };
+//         console.log("Constructor called");
+//     }
+
+//     componentWillUnmount() {
+//         console.log("Component will unmount!");
+//         // Clean up tasks here (e.g., clearInterval, removeEventListener)
+//     }
+
+//     render() {
+//         return (
+//             <div id="container">
+//                 <h1>{this.state.message}</h1>
+//                 <p>Check the console to see when the constructor runs.</p>
+//             </div>
+//         );
+//     }
+// }
+
+// export default App;
+
+// Example: useEffect to update the document title and clean up a timer
+
+// import React, { useState, useEffect } from "react";
+
+// export default function App() {
+//     const [count, setCount] = useState(0);
+
+//     // Runs after every render
+//     useEffect(() => {
+//         document.title = `Count: ${count}`;
+//         // Cleanup function (like componentWillUnmount)
+//         return () => {
+//             console.log("Cleanup before next effect or unmount");
+//         };
+//     }, [count]); // Only runs when 'count' changes
+
+//     return (
+//         <div>
+//             <h1>{count}</h1>
+//             <button onClick={() => setCount(count + 1)}>Increase</button>
+//         </div>
+//     );
+// }
+
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// filepath: /workspaces/Reactprograms/React/my-app/src/App.js
+import DashboardMainContent from './Components/DashboardMainContent/dashboard/dashboard_main';
+import CalendarView from './Components/DashboardMainContent/calendar_view/calendar';
+import './App.css';
+
+const App = () => {
+  return (
+    <Router>
+      <div className="app-layout">
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<dashbaord />} />
+            <Route path="/calendar" element={<CalendarView />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
